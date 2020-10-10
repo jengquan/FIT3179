@@ -2048,7 +2048,7 @@
       }
     ]
   },
-  "mark": "point",
+  "mark": {"type": "point", "tooltip": true},
   "encoding": {
     "x": {
       "field": "Economy (GDP per capita)",
