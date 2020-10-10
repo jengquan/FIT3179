@@ -2058,7 +2058,10 @@
           ]
         }
       },
-      "mark": "bar",
+      "mark": {
+        "type": "bar",
+        "tooltip": true
+      },
       "encoding": {
         "x": {
           "field": "Region",
