@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple bar chart with embedded data.",
+  "width": 500,
+  "height": 300,
   "data": {
     "values": [
       {
@@ -2046,18 +2048,60 @@
       }
     ]
   },
-  "mark": "bar",
-  "encoding": {
-    "x": {
-      "field": "Region",
-      "type": "nominal",
-      "sort": "-y"
+  "layer": [
+    {
+      "selection": {
+        "brush": {
+          "type": "interval",
+          "encodings": [
+            "x"
+          ]
+        }
+      },
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Region",
+          "type": "nominal",
+          "sort": "-y"
+        },
+        "y": {
+          "aggregate": "mean",
+          "field": "Economy (GDP per capita)",
+          "type": "quantitative"
+        },
+        "opacity": {
+          "condition": {
+            "selection": "brush",
+            "value": 1
+          },
+          "value": 0.7
+        }
+      }
     },
-    "y": {
-      "field": "Economy (GDP per capita)",
-      "type": "quantitative",
-      "aggregate": "average"
+    {
+      "transform": [
+        {
+          "filter": {
+            "selection": "brush"
+          }
+        }
+      ],
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Economy (GDP per capita)",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "firebrick"
+        },
+        "size": {
+          "value": 3
+        }
+      }
     }
-  },
+  ],
   "config": {}
 }
