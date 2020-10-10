@@ -3,7 +3,11 @@
   "description": "A simple bar chart with embedded data.",
   "width": 500,
   "height": 300,
-  "title": "Country against Happiness Score",
+   
+  "title": {
+  "text": "Country against Happiness Score",
+  "fontSize": 15},
+
   "data": {
     "values": [
       {
