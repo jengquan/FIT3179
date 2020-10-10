@@ -2068,6 +2068,7 @@
           "type": "nominal",
           "sort": "-y"
         },
+        "color": {"field": "Region", "type": "nominal"},
         "y": {
           "aggregate": "mean",
           "field": "Economy (GDP per capita)",
@@ -2098,10 +2099,10 @@
           "type": "quantitative"
         },
         "color": {
-          "value": "firebrick"
+          "value": "black"
         },
         "size": {
-          "value": 3
+          "value": 2
         }
       }
     }
