@@ -2092,7 +2092,7 @@
           "value": "silver"
         },
         "size": {
-          "value": 5
+          "value": 8
         },
         "y": {
           "field": "Happiness Score",
@@ -2123,7 +2123,7 @@
             "test": "datum['Country'] == 'Finland' ",
             "value": "red"
           },
-          "value": "dodgerblue"
+          "value": "steelblue"
         },
         "y": {
           "field": "Happiness Score",
