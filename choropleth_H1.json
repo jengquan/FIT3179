@@ -418,7 +418,7 @@
               "Suicide rate (100,000)": 57
             },
             {
-              "Country": "Congo (Brazzaville)",
+              "Country": "Dem. Rep. Congo",
               "Region": "Sub-Saharan Africa",
               "Happiness Score": 4.812,
               "Economy (GDP per capita)": 0.673,
@@ -431,7 +431,7 @@
               "Suicide rate (100,000)": 0
             },
             {
-              "Country": "Congo (Kinshasa)",
+              "Country": "Central African Rep.",
               "Region": "Sub-Saharan Africa",
               "Happiness Score": 4.418,
               "Economy (GDP per capita)": 0.094,
@@ -1692,7 +1692,7 @@
               "Suicide rate (100,000)": 13765
             },
             {
-              "Country": "South Sudan",
+              "Country": "S. Sudan",
               "Region": "Sub-Saharan Africa",
               "Happiness Score": 2.853,
               "Economy (GDP per capita)": 0.306,
