@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Economy (GDP per capita) versus Happiness Score of different Region",
   "description": "A scatterplot showing the correlation between Economy (GDP per capita) and Happiness Score of every country having a third dimension using region as different colours to represent each different regions.",
   "width": 500,
   "height": 300,
@@ -2048,7 +2049,7 @@
       }
     ]
   },
-  "mark": {"type": "point", "tooltip": true},
+  "mark": {"type": "circle", "tooltip": true},
   "encoding": {
     "x": {
       "field": "Economy (GDP per capita)",
@@ -2067,7 +2068,7 @@
     "color": {
       "field": "Region",
       "type": "nominal"
-    }
-  },
-  "config": {}
+    },
+    "size": {"value" : 90}
+  }
 }
