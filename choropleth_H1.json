@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Happiness Score Over Countries 2019",
-  "width": 800,
-  "height": 600,
+  "title": "Happiness Score across each Country 2019",
+  "width": 750,
+  "height": 400,
   "projection": {"type": "equirectangular"},
   "data": {
     "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
@@ -704,7 +704,7 @@
               "Suicide rate (100,000)": 466
             },
             {
-              "Country": "Guinea",
+              "Country": "Papua New Guinea",
               "Region": "Sub-Saharan Africa",
               "Happiness Score": 4.534,
               "Economy (GDP per capita)": 0.38,
@@ -1952,7 +1952,7 @@
               "Suicide rate (100,000)": 0
             },
             {
-              "Country": "United States",
+              "Country": "United States of America",
               "Region": "North America",
               "Happiness Score": 6.892,
               "Economy (GDP per capita)": 1.433,
