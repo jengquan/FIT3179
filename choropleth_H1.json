@@ -2062,7 +2062,7 @@
       }
     }
   ],
-  "mark": {"type": "geoshape"},
+  "mark": {"type": "geoshape", "stroke": "grey"},
   "encoding": {
     "color": {
       "field": "Happiness Score",
