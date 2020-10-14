@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Happiness Score by Country",
   "description": "A simple bar chart with embedded data.",
   "width": 500,
   "height": 300,
