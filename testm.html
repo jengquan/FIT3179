@@ -130,12 +130,10 @@ width: 100%;
 
 .column {
   width: 50%;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 400px; /* Should be removed. Only for demonstration */
 }
 
-  .col {
-  width: 50%;
-  }
+
   
   
 .row:after {
@@ -162,7 +160,7 @@ width: 100%;
     <p>Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 
     Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction
     Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction
-    Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 14 </p>
+    Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 15 </p>
     
   </article>
 </section>
@@ -201,9 +199,9 @@ width: 100%;
   
 <section>  
   
-<div class="row" style = "height: 300px;">
+<div class="row">
   <div id="vis2" class="column" style="background-color:#aaa;"> </div>  
-  <div id="vis2" class="column" style="background-color:#aaa;"> </div>
+  <div id="vis3" class="column" style="background-color:#aaa;"> </div>
 </div>
   
 </section>
@@ -278,6 +276,7 @@ width: 100%;
   <script type="text/javascript">
   var specVis1 = "./choropleth_E2.json";
   var specVis2= "./lollipop_H2.json";
+  var specVis3= "./boxplot_H3.json";
 
   vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
