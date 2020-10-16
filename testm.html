@@ -138,6 +138,19 @@ width: 100%;
    }
   
 
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+  
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
     
 }
 </style>
@@ -155,7 +168,7 @@ width: 100%;
     <p>Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 
     Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction
     Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction
-    Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 6 </p>
+    Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 7 </p>
     
   </article>
 </section>
@@ -193,14 +206,13 @@ width: 100%;
  </section>
   
 <section>  
- <div class="pure-g">
-        <div class="pure-u-12-24">
-          <div id="vis2" class="mid-container"> </div>   
-        </div>
-   
-        <div class="pure-u-12-24">
-          <div id="vis2" class="mid-container"></div>
-        </div>
+  
+<div class="row">
+  <div class="column" style="background-color:#aaa;">Column</div>
+  <div class="column" style="background-color:#bbb;">Column</div>
+ 
+
+  
   </div>
 </section>
   
