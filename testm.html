@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  
-   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
-  <!-- Import vega-embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-
-  
-  
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +35,7 @@ nav {
 article {
   float: left;
   padding: 20px;
-  width: 50%;
+  width = 50%;
   background-color: grey;
   
 }
@@ -80,122 +65,68 @@ section:after {
 
 /* Style the footer */
 footer {
-  background-color: #777;
+  background-color: #fffae6;
   padding: 10px;
   text-align: center;
-  color: white;
+  color: black;
+  margin-top: 5px;
 }
 
 
 .brief {
   background: #fff5cc;
   width: 100%;
+
   }
 
 .question {
  background: #fff0b3;
  text-align: center;
- border-style: ridge;
  width: 100%;
+  margin-top: 10px;
 }
 
 .map {
 background-color:white;
 height : 300px;
+text-align: center;
 width: 100%;
 }
 
 .mapdesc {
  background: #fff5cc;
  width: 100%;
+  margin-bottom: 10px;
+
 }
 
-  
+
 .vis-container{
- width: 100%;
- text-align: center;
- height: 400px;
-}
- 
-
- .pure-g{
-   margin-bottom: 10px;
-   }
-  
+      width: 100%;
+    }
+    
+    
 }
 </style>
 </head>
 <body>
 
 <header>
-  <h2>Cities</h2>
+  <h2>Happiness Score 2019</h2>
 </header>
 
   
 <section>
   <article class ="brief">
    
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction </p>
     
   </article>
 </section>
 
 <section>
   <article class ="question">
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-  </article>
-  
-  
-   <div class="pure-g">
-        <div class="pure-u-1">
-          <div id="vis1"  class="vis-container"></div>
-        </div>
-     </div> 
-
-</section>
-  
-<section>
-  <article class ="mapdesc">
-    <p> diagram 1 dsssssssssssssssssssssssssssssssssssssssssssssssssssssdsdsdsdsdsdssssdsdsdsdsdds</p>
-  </article>
-</section>
-
-
-<section>
-
-    
-  <nav style ="float: right">
-    <p> try </p>
-  </nav>
-  
-   <nav style ="float: left">
-    <p> try 1</p>
-  </nav>
-  
-   <nav style ="float: right; height : 300px; background-color:white;">
-    <p> diagram </p>
-  </nav>
-  
-   <nav style ="float: left; height : 300px; background-color:white;">
-    <p> diagram 1</p>
-  </nav>
-  
-   <nav style ="float: right;   background: #fff0b3;">
-    <p> desc </p>
-  </nav>
-  
-   <nav style ="float: left;   background: #fff0b3;">
-    <p> desc </p>
-  </nav>
-  
-
-</section>
-
-
-
-<section>
-  <article class ="question">
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Question 1</p>
   </article>
   
   <article class ="map">
@@ -206,7 +137,7 @@ width: 100%;
   
 <section>
   <article class ="mapdesc">
-    <p> diagram 1 dsssssssssssssssssssssssssssssssssssssssssssssssssssssdsdsdsdsdsdssssdsdsdsdsdds</p>
+    <p> diagram 1 desc</p>
   </article>
 </section>
 
@@ -230,11 +161,62 @@ width: 100%;
     <p> diagram 1</p>
   </nav>
   
-   <nav style ="float: right;   background: #fff0b3;">
+   <nav style ="float: right;   background: #fff5cc;">
     <p> desc </p>
   </nav>
   
-   <nav style ="float: left;   background: #fff0b3;">
+   <nav style ="float: left;   background: #fff5cc;">
+    <p> desc </p>
+  </nav>
+  
+
+</section>
+
+
+
+<section>
+  <article class ="question">
+    <p>Question 1</p>
+  </article>
+  
+  <article class ="map">
+    <p> diagram 1</p>
+  </article>
+  
+</section>
+  
+<section>
+  <article class ="mapdesc">
+    <p> diagram 1 desc</p>
+  </article>
+</section>
+
+
+
+<section>
+
+    
+  <nav style ="float: right">
+    <p> try </p>
+  </nav>
+  
+   <nav style ="float: left">
+    <p> try 1</p>
+  </nav>
+  
+   <nav style ="float: right; height : 300px; background-color:white;">
+    <p> diagram </p>
+  </nav>
+  
+   <nav style ="float: left; height : 300px; background-color:white;">
+    <p> diagram 1</p>
+  </nav>
+  
+   <nav style ="float: right;   background: #fff5cc;">
+    <p> desc </p>
+  </nav>
+  
+   <nav style ="float: left;   background: #fff5cc;">
     <p> desc </p>
   </nav>
   
@@ -244,29 +226,6 @@ width: 100%;
 <footer>
   <p>Footer</p>
 </footer>
-  
-  
-  <script type="text/javascript">
-  var specVis1 = "./choropleth_E2.json";
-  var specVis2= "./lollipop_H2.json";
-
-  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-  
 
 </body>
 </html>
