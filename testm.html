@@ -62,12 +62,7 @@ nav {
 }
 
 
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 
 /* Style the footer */
 footer {
@@ -134,15 +129,15 @@ width: 100%;
   
 
 .column {
-
   width: 50%;
   height: 300px; /* Should be removed. Only for demonstration */
 }
   
-  .row:after {
+.row:after {
   content: "";
   display: table;
   clear: both;
+  
 }
   
     
@@ -162,7 +157,7 @@ width: 100%;
     <p>Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 
     Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction
     Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction
-    Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 10 </p>
+    Brief introduction Brief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introductionBrief introduction 11 </p>
     
   </article>
 </section>
@@ -202,15 +197,9 @@ width: 100%;
 <section>  
   
 <div class="row" style = "height: 300px;">
-  <div class="column" style="background-color:#aaa;   float: left;">
-    <div id="vis2" class="vis-container"> </div>  
-  </div>
-  <div class="column" style="background-color:#bbb;   float: right;">
-    <div id="vis2" class="vis-container"> </div>
+  <div id="vis2" class="column" style="background-color:#aaa;"> </div>  
+  <div id="vis2" class="column" style="background-color:#aaa;"> </div>
  </div>
- 
-  
-
   
   </div>
 </section>
