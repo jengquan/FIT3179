@@ -95,6 +95,11 @@ width: 100%;
  width: 100%;
 }
 
+  
+    .vis-container{
+      width: 100%;
+    }
+  
 }
 </style>
 </head>
@@ -120,6 +125,9 @@ width: 100%;
   
   <article class ="map">
     <p> diagram 1</p>
+    <div id="vis2"  class="vis-container"></div>
+        </div>
+  
   </article>
   
 </section>
@@ -214,6 +222,29 @@ width: 100%;
 <footer>
   <p>Footer</p>
 </footer>
+  
+  
+  <script type="text/javascript">
+  var specVis1 = "./choropleth_H1.json";
+  var specVis2= "./lollipop_H2.json";
+
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
 
 </body>
 </html>
