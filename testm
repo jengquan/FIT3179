@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #ffe066;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: right;
+  width: 50%;
+  background: #fff0b3;
+  padding: 20px;
+  border-style: ridge;
+}
+
+
+article {
+  float: left;
+  padding: 20px;
+  width = 50%;
+  background-color: grey;
+  
+}
+
+.a1 {
+ float: right;
+ width: 50%;
+ background-color: grey;
+ border-style: ridge;
+}
+
+
+.a2 {
+ float: left;
+ width: 50%;
+ background-color: grey;
+ border-style: ridge;
+}
+
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+.brief {
+  background: #fff5cc;
+  }
+
+.question {
+ background: #fff0b3;
+ text-align: center;
+ border-style: ridge;
+}
+
+.map {
+background-color:white;
+height : 300px;
+}
+
+.mapdesc {
+ background: #fff5cc;
+}
+
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Cities</h2>
+</header>
+
+  
+<section>
+  <article class ="brief">
+   
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    
+  </article>
+</section>
+
+<section>
+  <article class ="question">
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  </article>
+  
+  <article class ="map">
+    <p> diagram 1</p>
+  </article>
+  
+</section>
+  
+<section>
+  <article class ="mapdesc">
+    <p> diagram 1 dsssssssssssssssssssssssssssssssssssssssssssssssssssssdsdsdsdsdsdssssdsdsdsdsdds</p>
+  </article>
+</section>
+
+
+<section>
+
+    
+  <nav style ="float: right">
+    <p> try </p>
+  </nav>
+  
+   <nav style ="float: left">
+    <p> try 1</p>
+  </nav>
+  
+   <nav style ="float: right; height : 300px; background-color:white;">
+    <p> diagram </p>
+  </nav>
+  
+   <nav style ="float: left; height : 300px; background-color:white;">
+    <p> diagram 1</p>
+  </nav>
+  
+   <nav style ="float: right;   background: #fff0b3;">
+    <p> desc </p>
+  </nav>
+  
+   <nav style ="float: left;   background: #fff0b3;">
+    <p> desc </p>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+</section>
+
+<section>
+  <nav style ="float: right">
+    <p> try </p>
+  </nav>
+  
+   <nav style ="float: left">
+    <p> try 1</p>
+  </nav>
+</section>
+
+<section>
+<article class = "a1">
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+  
+  <article class = "a2">
+    <h1>London</h1>
+    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </article>
+  
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
