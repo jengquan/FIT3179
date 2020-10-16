@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
 <title>CSS Template</title>
+
+  !-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  
+  
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -101,10 +115,19 @@ width: 100%;
 }
 
 
+
+  
 .vis-container{
-      width: 100%;
-    }
-    
+ width: 100%;
+ text-align: center;
+}
+ 
+
+ .pure-g{
+   margin-bottom: 10px;
+   }
+  
+
     
 }
 </style>
@@ -129,9 +152,14 @@ width: 100%;
     <p>Question 1</p>
   </article>
   
-  <article class ="map">
-    <p> diagram 1</p>
-  </article>
+ 
+
+<div class="pure-g">
+        <div class="pure-u-1">
+          <div id="vis1"  class="vis-container"></div>
+        </div>
+     </div>
+
   
 </section>
   
@@ -227,5 +255,32 @@ width: 100%;
   <p>Footer</p>
 </footer>
 
+  
+  
+
+
+  <script type="text/javascript">
+  var specVis1 = "./choropleth_E2.json";
+  var specVis2= "./lollipop_H2.json";
+
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
+  
+  
 </body>
 </html>
