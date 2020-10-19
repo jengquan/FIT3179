@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title" : "Distribution of Happiness Score by Region",
+  "title": {"text": "Distribution of Happiness Score by Region", 
+  "fontSize": 17, "fontWeight": 600},
   "description": "A vertical box plot showing median and lower and upper quartiles of the distribution of Happiness Score of regions.",
   "width": "container",
   "height": 300,
