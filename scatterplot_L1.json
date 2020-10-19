@@ -2130,7 +2130,7 @@
       "type": "nominal"
     },
     "opacity": {
-        "condition": {"selection": "region_highlight", "value": 0.7},
+        "condition": {"selection": "region_highlight", "value": 0.9},
         "value": 0.2
         },
 
