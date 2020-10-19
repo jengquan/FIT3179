@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Assignment 2</title>
+
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+  
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  
+
+/* Style the header */
+header {
+  background-color: #ffe066;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+  font-family: "Times New Roman", Times, serif
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: right;
+  width: 50%;
+  background: #fff0b3;
+  padding: 20px;
+  border-style: ridge;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+
+/* Style the footer */
+footer {
+  background-color: #fffae6;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  margin-top: 5px;
+}
+
+
+.brief {
+  background: #fff5cc;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+.question {
+ background: #fff0b3;
+ text-align: center;
+ width: 100%;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+ font-family: "Times New Roman", Times, serif;
+}
+
+.map {
+background-color:white;
+height : 300px;
+text-align: center;
+width: 100%;
+}
+
+.mapdesc {
+ background: #fff5cc;
+ width: 100%;
+ margin-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+  
+.vis-container{
+ width: 100%;
+ text-align: center;
+ object-fit: contain;
+ height: auto;
+}
+ 
+
+
+ .pure-g{
+   margin-bottom: 10px;
+   }
+  
+
+.column {
+  float: left;
+  width: 50%;
+  height: 400px; /* Should be removed. Only for demonstration */
+  text-align: center;
+}
+
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+.column1 {
+  width: 100%;
+  height: 500px; /* Should be removed. Only for demonstration */
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+    
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Homework Week 10</h2>
+</header>
+
+
+  
+<section>
+  <article class ="question">
+    <p>Question 1</p>
+  </article>
+ <div id="vis1" class="column1" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+</section>
+  
+<section>
+  <article class ="mapdesc">
+    <p> diagram desc</p>
+  </article>
+</section>
+  
+  
+<section>
+  <article class ="question">
+    <p>Question 1</p>
+  </article>
+ <div id="vis2" class="column1" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+</section>
+  
+<section>
+  <article class ="mapdesc">
+    <p> diagram desc</p>
+  </article>
+</section>
+  
+
+
+  <script type="text/javascript">
+  var specVis1= "./choropleth_H1.json";
+  var specVis2= "./scatterplot_E1.json";
+  
+   
+   
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+
+    
+</script>
+  
+  
+  
+</body>
+</html>
