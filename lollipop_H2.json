@@ -1,6 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Average Happiness Score by Region",
+  "title": {"text": "Average Happiness Score by Region", 
+  "fontSize": 17, "fontWeight": 600},
   "description": "A simple bar chart with embedded data.",
   "width": "container",
   "height": 300,
