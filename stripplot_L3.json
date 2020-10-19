@@ -2,9 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {"text": "Distribution of Life Expectancy by Region", 
   "fontSize": 17, "fontWeight": 600},
-  
   "width": "container",
-  "height": 300,
+  "height": 400,
   "data": {
     "values": [
       {
@@ -2050,6 +2049,15 @@
       }
     ]
   },
+
+  "selection": {
+        "region_highlight": {
+          "type": "multi",
+          "fields": ["Region"],
+          "bind": "legend"
+        }
+  }
+        ,
   "mark": "tick",
   "encoding": {
     "x": {
@@ -2059,6 +2067,10 @@
     },
     "y": {"field": "Region", "type": "ordinal"},
     "color": {"field": "Region", "type": "nominal"}
-  },
-  "config": {}
+    ,
+    "opacity": {
+      "condition": {"selection": "region_highlight", "value": 1},
+          "value": 0.2
+        }
+  }
 }
