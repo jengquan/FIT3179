@@ -2058,7 +2058,7 @@
         }
   }
         ,
-  "mark": "tick",
+  "mark": {"type":"tick", "tooltip": true},
   "encoding": {
     "x": {
       "field": "Life expectancy",
