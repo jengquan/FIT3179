@@ -2122,7 +2122,7 @@
         }
       },
 
-  "mark": {"type": "circle", "tooltip": true},
+  "mark": {"type": "point", "tooltip": true},
 
   "encoding": {
     "color": {
