@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Life expectancy across each Country 2019",
   "title": {"text": "Life expectancy by Country", 
   "fontSize": 17, "fontWeight": 600},
   
