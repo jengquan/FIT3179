@@ -3,7 +3,7 @@
   "title": {"text": "Happiness Score by Country", 
   "fontSize": 17, "fontWeight": 600},
   
-  "width": 600,
+  "width": 800,
   "height": 500,
   "projection": {"type": "equirectangular"},
   "data": {
