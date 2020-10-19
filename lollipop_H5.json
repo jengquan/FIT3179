@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {"text": "Country against Happiness Score", "fontSize": 15},
   "description": "A simple bar chart with embedded data.",
-  "width": 500,
+  "width": "container",
   "height": 300,
   "data": {
     "values": [
