@@ -1,6 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Distribution of Life Expectancy by Region",
+  "title": {"text": "Distribution of Life Expectancy by Region", 
+  "fontSize": 17, "fontWeight": 600},
+  
   "width": "container",
   "height": 300,
   "data": {
