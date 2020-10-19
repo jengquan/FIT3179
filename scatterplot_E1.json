@@ -4,7 +4,7 @@
   "fontSize": 17, "fontWeight": 600},
   "description": "A scatterplot showing the correlation between Economy (GDP per capita) and Happiness Score of every country having a third dimension using region as different colours to represent each different regions.",
   "width": "container",
-  "height": 300,
+  "height": 400,
   "data": {
     "values": [
       {
