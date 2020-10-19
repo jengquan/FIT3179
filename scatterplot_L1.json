@@ -4,7 +4,7 @@
   "fontSize": 17, "fontWeight": 600},
   "description": "A scatterplot showing the correlation between  Happiness Score of every country having a third dimension using region as different colours to represent each different regions.",
   "width": "container",
-  "height": 300,
+  "height": 400,
   "data": {
     "values": [
       {
@@ -2050,26 +2050,127 @@
       }
     ]
   },
-  "mark": {"type": "point", "tooltip": true},
+
+   "params": [
+    {
+      "name": "region_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Australia and New Zealand",
+          "Central and Eastern Europe",
+          "Eastern Asia",
+          "Latin America and Caribbean",
+          "Middle East and Northern Africa",
+          "North America",
+          "Southeastern Asia",
+          "Southern Asia",
+          "Sub-Saharan Africa",
+          "Western Europe"
+        ],
+        "labels": [
+          "Show All",
+           "Australia and New Zealand",
+          "Central and Eastern Europe",
+          "Eastern Asia",
+          "Latin America and Caribbean",
+          "Middle East and Northern Africa",
+          "North America",
+          "Southeastern Asia",
+          "Southern Asia",
+          "Sub-Saharan Africa",
+          "Western Europe"
+        ],
+        "name": "Region Selection: "
+      }
+    }
+  ],
+
+
   "encoding": {
     "x": {
       "field": "Happiness Score",
       "type": "quantitative",
-      "scale": {
-        "zero": false
-      }
+ 
+      "scale": {"type": "linear", "domain": [2, 9]}
     },
     "y": {
       "field": "Life expectancy",
       "type": "quantitative",
-      "scale": {
-        "zero": false
-      }
+      "scale": {"type": "linear", "domain": [50, 90]}
     },
     "color": {
       "field": "Region",
       "type": "nominal"
-    },
-    "size": {"value" : 90}
+    }
   }
+
+  ,
+  "transform": [
+   {
+      "filter": "region_selection == null || datum.Region == region_selection"
+    }]
+  ,
+  "layer": [
+    {
+      "selection": {
+        "region_highlight": {
+          "type": "multi",
+          "fields": ["Region"],
+          "bind": "legend"
+        }
+      },
+
+  "mark": {"type": "circle", "tooltip": true},
+
+  "encoding": {
+    "color": {
+      "field": "Region",
+      "type": "nominal"
+    },
+    "opacity": {
+        "condition": {"selection": "region_highlight", "value": 0.7},
+        "value": 0.2
+        },
+
+    "size": {"value": 60},
+    "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Happiness Score", "type": "quantitative", "format": ","},
+          {"field": "Life Expectancy", "type": "quantitative", "format": ","},
+          {"field": "Region", "type": "nominal"}
+        ]
+    }
+  }
+    ,
+    {
+      "mark": {
+       "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": " datum['Country'] == 'Japan' || datum['Country'] == 'Denmark' || datum['Country'] == 'Ivory Coast' || datum['Country'] == 'Switzerland' ||  datum['Country'] == 'Syria' || datum['Country'] == 'India' || datum['Country'] == 'Mexico' || datum['Country'] == 'Nigeria' || datum['Country'] == 'Cambodia' || datum['Country'] == 'Cameroon' || datum['Country'] == 'Pakistan' || datum['Country'] == 'United States' ",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Happiness Score", "type": "quantitative", "format": ","},
+          {"field": "Life expectancy", "type": "quantitative", "format": ","},
+          {"field": "Region", "type": "nominal"}
+        ]
+
+      }
+    }
+  ]
+
 }
