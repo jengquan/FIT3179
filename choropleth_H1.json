@@ -2072,15 +2072,14 @@
       "scale": {
         "type": "threshold",
         "domain": [3, 4, 5, 6, 7, 8],
-        "range": [
-          "#eff3ff",
-          "#c6dbef",
-          "#9ecae1",
-          "#6baed6",
-          "#4292c6",
-          "#2171b5",
-          "#084594"
-        ]
+        
+"range" : [
+"#ffffcc",
+"#c7e9b4",
+"#7fcdbb",
+"#41b6c4",
+"#2c7fb8",
+"#253494"]
       }
     },
     "tooltip": [
