@@ -2071,14 +2071,12 @@
       "scale": {
         "type": "threshold",
         "domain": [0.3, 0.6, 0.9, 1.2, 1.5, 1.8],
-        "range": [
-          "#fee5d9",
-          "#fcbba1",
-          "#fc9272",
-          "#fb6a4a",
-          "#de2d26",
-          "#a50f15"
-        ]
+        "range" : [ "#ffffb2",
+"#fed976",
+"#feb24c",
+"#fd8d3c",
+"#f03b20",
+"#bd0026"]
       }
     },
     "tooltip": [
