@@ -5,7 +5,7 @@
   
   "width": "container",
   "height": 500,
-  "projection": {"type": "equirectangular"},
+  "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
