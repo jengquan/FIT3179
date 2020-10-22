@@ -2066,10 +2066,9 @@
       "type": "quantitative",
       "scale": {
         "zero": false
-      }
-      ,
+      }     
+    },
     "tooltip":[   {"field": "Country", "type": "nominal"},{"field": "Region", "type": "nominal"}, {"field": "Happiness Score", "type": "quantitative"}]
-    }
   },
   "config": {}
 }
