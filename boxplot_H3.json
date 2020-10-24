@@ -4,7 +4,7 @@
   "fontSize": 17, "fontWeight": 600},
   "description": "A vertical box plot showing median and lower and upper quartiles of the distribution of Happiness Score of regions.",
   "width": "container",
-  "height": 400,
+  "height": 350,
   "data": {
     "values": [
       {
