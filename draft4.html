@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Assignment 2</title>
+
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+  
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  
+
+/* Style the header */
+header {
+  background-color: #ffe066;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+  font-family: "Times New Roman", Times, serif
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: right;
+  width: 50%;
+  height: 100px;
+  background: #fff0b3;
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 10px;
+  font-size: 24px;
+  
+  
+}
+
+
+
+/* Style the footer */
+footer {
+  background-color: #fffae6;
+  height: 30px;
+  color: black;
+  margin-bottom: 5px;
+  font-size: 15px;
+  padding-top: 2px;
+}
+
+
+.brief {
+  background: #fff5cc;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+.question {
+ background: #fff0b3;
+ text-align: center;
+ width: 100%;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+ font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+}
+
+.map {
+background-color:white;
+height : 300px;
+text-align: center;
+width: 100%;
+}
+
+.mapdesc {
+ background: #fff5cc;
+ width: 100%;
+ margin-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+  
+.vis-container{
+ width: 100%;
+ text-align: center;
+ object-fit: contain;
+ height: auto;
+}
+ 
+
+
+ .pure-g{
+   margin-bottom: 10px;
+   }
+  
+
+.column {
+  float: left;
+  width: 50%;
+  height: 400px; /* Should be removed. Only for demonstration */
+  text-align: center;
+}
+
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+.column1 {
+  width: 100%;
+  height: 500px; /* Should be removed. Only for demonstration */
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  
+    
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>World Happiness Score 2019</h2>
+</header>
+
+  
+<section>
+  <article class ="brief">
+   
+    <p>
+      <b>Happiness</b> is a healthy emotion which plays an <b>important role</b> in our life, that helps us to stay fit both mentally and physically. 
+      Happiness not only keeps us away from any health issues but also reduces our stress level. <br><br>
+
+      Happiness is <b>different</b> for each person as everyone has their <b>own way</b> to be happy. Hence, it is important to understand and find out <b>our own</b> definition of happiness 
+      or what <b>makes us happy</b> as the reason of happiness may be different for everyone. <br> <br>
+      
+      Therefore, the objective of this visualisation is to share insights on topics such as the <b>Happiness Score</b> across each country, the <b>happiest region</b> in the world, the <b>distribution</b> of Happiness Score for each regions in the world.
+    
+
+      Next, we will be identifying wheter <b>Economy (GDP per capita)</b> is a <b>factor</b> of happiness and wheter a happier country leads to a longer <b>Life Expectancy</b>. Both <b>spatial distribution</b> of each country's Economy (GDP per capita) and Life Expectancy will be identified in this visualisation.
+      
+      Lastly, we will also be covering the top 10 <b>unhappiest</b> and <b>happiest country</b> in the world to live in.
+    </p>
+    
+  </article>
+</section>
+
+<!-- 
+<section>
+  <article class ="question">
+    <p>Question 1</p>
+  </article>
+  
+ 
+   <div class="pure-g">
+        <div class="pure-u-1">
+          <div id="vis1"  class="vis-container" ></div>
+        </div>
+   </div>
+  
+  
+</section>
+
+-->
+  
+
+  
+  
+<section>
+  <nav style ="float: right; text-align: center; ">
+    <p> Distribution of <b>Happiness Score</b> among each <b>region</b> ? </p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center;  border-right-style: ridge;">
+    <p> <b>Average Happiness Score</b> for each <b>region</b> ? </p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis1" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  border-right-style: ridge;"> </div>  
+  <div id="vis3" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-right-style: ridge;  margin-bottom: 10px;">
+    
+    As mentioned earlier, we can see why <i>Australia and New Zealand</i> region tops the chart for having the <b>highest average Happiness Score</b>.<br><br>
+    Next, <i>Western Europe</i> has the <b>second highest</b> average Happiness Score, this is because citizens in Nordic countries such as <i>Finland</i>, <i>Denmark</i> and <i>Norway</i> experience a 
+    high sense of <b>autonomy</b> and <b>freedom</b>, 
+    and <b>social trust</b> towards each other. Institutional quality and <b>well-functioning democracy</b> also plays a huge role in determining the country's happiness.
+    <br><br>
+
+    Besides that, we can see that <i>Sub-Saharan Africa</i> is the <b>unhappiest region</b> in the world. This is due to some issues faced by the citizens in countries like <i>Nigeria</i>, <i>Tanzania</i> and <i>Kenya</i>, 
+ 
+    where <b>energy shortages</b>, fuel scarcity, and the <b>lack of access of clean water</b> happens frequently.
+    Not to mention, high crime rates and <b>government corruption</b> has also affected the overall country's happiness level in the region.
+    
+  
+  </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> 
+    Based on the boxplots above, we can see that <i>North America</i> region has the <b>largest range</b> among other regions, followed by <i>Middle East and Northern Africa</i>. 
+    <br><br>This shows that countries in these two region tend to have a wide range of different Happiness Score as compared to other regions like
+    <i>Eastern Asia</i> and <i>Southern Asia</i>.<br><br>
+
+    Next, we can also see that <i>Australia and New Zealand</i> region has the <b>largest median</b> of Happiness Score, followed by <i>Western Europe</i>.
+    The <b>least</b> median for Happiness Score will be in <i>Sub-Sahran Africa</i>. 
+
+  </div>
+</div>
+</section>  
+
+
+  
+  
+  
+  
+<section>
+  <nav style ="float: right; text-align: center; border-left-style: ridge; ">
+    <p> <b>Average Economy (GDP per capita)</b> for each <b>region</b> ?</p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center;  font-size: 23px; ">
+    <p> Do <b>countries</b> with better <b>Economy (GDP per capita)</b> tend to be <b>happier</b> ?</p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis4" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px;  "> </div>  
+  <div id="vis5" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; border-left-style: ridge;  "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;   margin-bottom: 10px; "> desc </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left; border-left-style: ridge;  margin-bottom: 10px;"> desc </div>
+</div>
+</section>  
+
+  
+
+<section>
+  <article class ="question">
+    <p> What is the <b>Economy (GDP per capita)</b> across all <b>countries</b> ?</p>
+  </article>
+ <div id="vis6" class="column1" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+</section>
+  
+<section>
+  <article class ="mapdesc">
+    <p> diagram desc</p>
+  </article>
+</section>
+  
+  
+  
+  
+
+<section>
+  <nav style ="float: right; text-align: center; ">
+    <p> Distribution of <b>Life expectancy</b> among each <b>region</b> ? </p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center;  border-right-style: ridge;">
+    <p> Is there a correlation between <b>Happiness Score</b> and <b>Life expectancy</b> ? </p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis7" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;   border-right-style: ridge;"> </div>  
+  <div id="vis8" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px; "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-right-style: ridge; margin-bottom: 10px;"> desc </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>
+</div>
+</section>  
+
+  
+
+<section>
+  <article class ="question">
+    <p> What is the <b>Life Expectancy</b> across all <b>countries</b> ?</p>
+  </article>
+ <div id="vis9" class="column1" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+</section>
+  
+<section>
+  <article class ="mapdesc">
+    <p> diagram desc</p>
+  </article>
+</section>
+  
+  
+  
+  
+
+
+<section>
+  <nav style ="float: right; text-align: center; ">
+    <p> Top 10 <b>happiest</b> <b>countries</b> in the world ? </p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center;  border-right-style: ridge;">
+    <p> Top 10 <b>countries</b> with the lowest <b>Happiness Score</b> ?</p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis11" class="column" style ="object-fit: scale-down; height: 500px; padding-right: 30px;  border-right-style: ridge;"> </div>  
+  <div id="vis10" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-right-style: ridge; margin-bottom: 10px;"> desc </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;   margin-bottom: 10px;"> desc </div>
+</div>
+</section>  
+
+  
+  
+  
+<footer>
+  <p>Visualisation by Ong Jeng Quan FIT3179 2020</p>
+</footer>
+  
+  
+
+
+  <script type="text/javascript">
+  var specVis1= "./choropleth_H1.json";
+  var specVis2= "./lollipop_H2.json";
+  var specVis3= "./boxplot_H3.json";
+   
+  var specVis4= "./scatterplot_E1.json";
+  var specVis5= "./columnchart_E3.json";
+  var specVis6= "./choropleth_E2.json";
+    
+ 
+  var specVis7= "./scatterplot_L1.json";
+  var specVis8= "./stripplot_L3.json";
+  var specVis9= "./choropleth_L2.json";
+    
+    
+  var specVis10= "./lollipop_H4.json";
+  var specVis11= "./lollipop_H5.json";
+
+   
+   
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis7', specVis7, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis8', specVis8, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis9', specVis9, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis10', specVis10, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis11', specVis11, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+    
+    
+</script>
+  
+  
+  
+</body>
+</html>
