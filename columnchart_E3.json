@@ -2069,7 +2069,9 @@
         "x": {
           "field": "Region",
           "type": "nominal",
-          "sort": "-y"
+          "sort": "-y",
+       "axis": {"labelAlign": "left", 
+      "labelAngle": 30}
         },
         "color": {"field": "Region", "type": "nominal"},
         "y": {
