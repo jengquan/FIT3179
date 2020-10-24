@@ -2079,6 +2079,7 @@
           "field": "Economy (GDP per capita)",
           "type": "quantitative"
         },
+        "size" :{"value": 38},
         "opacity": {
           "condition": {
             "selection": "brush",
