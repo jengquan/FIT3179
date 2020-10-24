@@ -78,6 +78,7 @@ footer {
   padding-bottom: 10px;
   padding-left: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
   }
 
 .question {
@@ -130,7 +131,7 @@ font-family: Arial, Helvetica, sans-serif;
 .column {
   float: left;
   width: 50%;
-  height: 400px; /* Should be removed. Only for demonstration */
+  height: 300px; /* Should be removed. Only for demonstration */
   text-align: center;
 }
 
@@ -199,26 +200,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 -->
   
-<section>
-  <article class ="question">
-    <p> What is the <b>Happiness Score</b> across all <b>countries</b> ?</p>
-  </article>
- <div id="vis1" class="column1" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
-</section>
-  
-<section>
-  <article class ="mapdesc">
-    <p> Firstly, <i>Canada</i> can be seen as one of the happiest country in the world as the citizens has <b>strong social ties</b> with people they associate with regardless of background that keeps them happy.
-      Not to mention,Canada also has a relatively <b>low unemployment rate</b>, <b>good health and education system</b> which contributes to the high level of life satisfication.
-<br><br>
-      Next, we can also see that <i>Australia</i> has a high Happiness Score. This is mainly due to the <b>good work-life balance</b> that the citizens have, which means that they have more time for their own family and friends 
-      which contributes to happiness. The country also has <b>low level of pollution</b> and high levels of civic engagement job oppurtunities.
-<br><br>
-      Furthermore, citizens in <i>New Zealand</i> is well-known for its <b>laid-back lifestyle</b> and the <b>social support</b> obtained was one of the main factors of New Zealander's high ranking for Happiness Score. 
-      Besides that, 
-      their <b>resilience</b> and the ability to <b>handle tough situations</b> also contributes to the country's overall happiness. </p>
-  </article>
-</section>
+
   
   
 <section>
@@ -227,22 +209,65 @@ font-family: Arial, Helvetica, sans-serif;
   </nav>
   
    <nav style ="float: left; text-align: center;  border-right-style: ridge;">
-    <p> <b>Average Happiness Score</b> for each <b>region</b> ? </p>
+    <p> Top 10 <b>happiest</b> <b>countries</b> in the world ? </p>
   </nav>
  </section>
   
 <section>  
 <div class="row">
-  <div id="vis2" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  border-right-style: ridge;"> </div>  
-  <div id="vis3" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  "> </div>
+  <div id="vis1" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  border-right-style: ridge;"> </div>  
+  <div id="vis10" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  "> </div>
 </div>
 </section>
   
 <section>
 <div class="row" >
   <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-right-style: ridge;  margin-bottom: 10px;">
+     <p>Firstly, <i>Canada</i> can be seen as one of the happiest country in the world as the citizens has <b>strong social ties</b> with people they associate with regardless of background that keeps them happy.
+      Not to mention,Canada also has a relatively <b>low unemployment rate</b>, <b>good health and education system</b> which contributes to the high level of life satisfication.
+<br><br>
+      Next, we can also see that <i>Australia</i> has a high Happiness Score. This is mainly due to the <b>good work-life balance</b> that the citizens have, which means that they have more time for their own family and friends 
+      which contributes to happiness. The country also has <b>low level of pollution</b> and high levels of civic engagement job oppurtunities.
+<br><br>
+      Furthermore, citizens in <i>New Zealand</i> is well-known for its <b>laid-back lifestyle</b> and the <b>social support</b> obtained was one of the main factors of New Zealander's high ranking for Happiness Score. 
+      Besides that, 
+      their <b>resilience</b> and the ability to <b>handle tough situations</b> also contributes to the country's overall happiness. </p>
     
-    As mentioned earlier, we can see why <i>Australia and New Zealand</i> region tops the chart for having the <b>highest average Happiness Score</b>.<br><br>
+  
+  </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> 
+  
+
+  </div>
+</div>
+</section>  
+
+
+  
+ <section>
+  <nav style ="float: right; text-align: center; border-left-style: ridge;">
+    <p> Distribution of <b>Happiness Score</b> among each <b>region</b> ? </p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center;">
+    <p> <b>Average Happiness Score</b> for each <b>region</b> ? </p>
+  </nav>
+ </section>
+  
+  
+
+<section>  
+<div class="row">
+  <div id="vis2" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>  
+  <div id="vis3" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  border-left-style: ridge; "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left; margin-bottom: 10px;">
+    
+   <p> As mentioned earlier, we can see why <i>Australia and New Zealand</i> region tops the chart for having the <b>highest average Happiness Score</b>.<br><br>
     Next, <i>Western Europe</i> has the <b>second highest</b> average Happiness Score, this is because citizens in Nordic countries such as <i>Finland</i>, <i>Denmark</i> and <i>Norway</i> experience a 
     high sense of <b>autonomy</b> and <b>freedom</b>, 
     and <b>social trust</b> towards each other. Institutional quality and <b>well-functioning democracy</b> also plays a huge role in determining the country's happiness.
@@ -251,30 +276,28 @@ font-family: Arial, Helvetica, sans-serif;
     Besides that, we can see that <i>Sub-Saharan Africa</i> is the <b>unhappiest region</b> in the world. This is due to some issues faced by the citizens in countries like <i>Nigeria</i>, <i>Tanzania</i> and <i>Kenya</i>, 
  
     where <b>energy shortages</b>, fuel scarcity, and the <b>lack of access of clean water</b> happens frequently.
-    Not to mention, high crime rates and <b>government corruption</b> has also affected the overall country's happiness level in the region.
+    Not to mention, high crime rates and <b>government corruption</b> has also affected the overall country's happiness level in the region.</p>
     
   
   </div>  
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> 
-    Based on the boxplots above, we can see that <i>North America</i> region has the <b>largest range</b> among other regions, followed by <i>Middle East and Northern Africa</i>. 
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-left-style: ridge; margin-bottom: 10px; "> 
+    <p>Based on the boxplots above, we can see that <i>North America</i> region has the <b>largest range</b> among other regions, followed by <i>Middle East and Northern Africa</i>. 
     <br><br>This shows that countries in these two region tend to have a wide range of different Happiness Score as compared to other regions like
     <i>Eastern Asia</i> and <i>Southern Asia</i>.<br><br>
 
     Next, we can also see that <i>Australia and New Zealand</i> region has the <b>largest median</b> of Happiness Score, followed by <i>Western Europe</i>.
-    The <b>least</b> median for Happiness Score will be in <i>Sub-Sahran Africa</i>. 
+      The <b>least</b> median for Happiness Score will be in <i>Sub-Sahran Africa</i>. </p>
 
   </div>
 </div>
 </section>  
-
-
   
   
   
   
 <section>
   <nav style ="float: right; text-align: center; border-left-style: ridge; ">
-    <p> <b>Average Economy (GDP per capita)</b> for each <b>region</b> ?</p>
+    <p> Is there a correlation between <b>Happiness Score</b> and <b>Life expectancy</b> ?</p>
   </nav>
   
    <nav style ="float: left; text-align: center;  font-size: 23px; ">
@@ -284,8 +307,8 @@ font-family: Arial, Helvetica, sans-serif;
   
 <section>  
 <div class="row">
-  <div id="vis4" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px;  "> </div>  
-  <div id="vis5" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; border-left-style: ridge;  "> </div>
+  <div id="vis4" class="column" style ="object-fit: scale-down; height: 500px; padding-right: 30px;  "> </div>  
+  <div id="vis7" class="column" style ="object-fit: scale-down; height: 500px; padding-right: 30px; border-left-style: ridge;  "> </div>
 </div>
 </section>
   
@@ -297,92 +320,63 @@ font-family: Arial, Helvetica, sans-serif;
 </section>  
 
   
+  
+  
+  
 
 <section>
-  <article class ="question">
+  <nav style ="float: left; text-align: center;">
     <p> What is the <b>Economy (GDP per capita)</b> across all <b>countries</b> ?</p>
-  </article>
- <div id="vis6" class="column1" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+  </nav>
+  
+   <nav style ="float: right; text-align: center; border-left-style: ridge;">
+    <p> <b>Average Economy (GDP per capita)</b> for each <b>region</b> ? </p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis6" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px;"> </div>  
+  <div id="vis5" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; border-left-style: ridge;"> </div>
+</div>
 </section>
   
 <section>
-  <article class ="mapdesc">
-    <p> diagram desc</p>
-  </article>
-</section>
-  
-  
-  
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-left-style: ridge;  margin-bottom: 10px;"> desc </div>
+</div>
+</section>  
+
   
 
+
 <section>
-  <nav style ="float: right; text-align: center; ">
+  <nav style ="float: right; text-align: center; border-left-style: ridge; ">
     <p> Distribution of <b>Life expectancy</b> among each <b>region</b> ? </p>
   </nav>
   
-   <nav style ="float: left; text-align: center;  border-right-style: ridge;">
-    <p> Is there a correlation between <b>Happiness Score</b> and <b>Life expectancy</b> ? </p>
+   <nav style ="float: left; text-align: center; ">
+    <p> What is the <b>Life Expectancy</b> across all <b>countries</b> ? </p>
   </nav>
  </section>
   
 <section>  
 <div class="row">
-  <div id="vis7" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;   border-right-style: ridge;"> </div>  
-  <div id="vis8" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px; "> </div>
+  <div id="vis9" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px;"> </div>  
+  <div id="vis8" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; border-left-style: ridge; "> </div>
 </div>
 </section>
   
 <section>
 <div class="row" >
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-right-style: ridge; margin-bottom: 10px;"> desc </div>  
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-left-style: ridge; margin-bottom: 10px;"> desc </div>
 </div>
 </section>  
 
   
-
-<section>
-  <article class ="question">
-    <p> What is the <b>Life Expectancy</b> across all <b>countries</b> ?</p>
-  </article>
- <div id="vis9" class="column1" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
-</section>
-  
-<section>
-  <article class ="mapdesc">
-    <p> diagram desc</p>
-  </article>
-</section>
-  
-  
-  
-  
-
-
-<section>
-  <nav style ="float: right; text-align: center; ">
-    <p> Top 10 <b>happiest</b> <b>countries</b> in the world ? </p>
-  </nav>
-  
-   <nav style ="float: left; text-align: center;  border-right-style: ridge;">
-    <p> Top 10 <b>countries</b> with the lowest <b>Happiness Score</b> ?</p>
-  </nav>
- </section>
-  
-<section>  
-<div class="row">
-  <div id="vis11" class="column" style ="object-fit: scale-down; height: 500px; padding-right: 30px;  border-right-style: ridge;"> </div>  
-  <div id="vis10" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
-</div>
-</section>
-  
-<section>
-<div class="row" >
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-right-style: ridge; margin-bottom: 10px;"> desc </div>  
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;   margin-bottom: 10px;"> desc </div>
-</div>
-</section>  
-
+ 
   
   
   
