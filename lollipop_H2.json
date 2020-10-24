@@ -5,10 +5,6 @@
   "description": "A simple bar chart with embedded data.",
   "width": "container",
   "height": 300,
-  "title": {
-    "text": "Region against Average Happiness Score",
-    "fontSize": 15
-  },
   "data": {
     "values": [
       {
@@ -2062,18 +2058,18 @@
         "binSpacing": 5
       },
       "encoding": {
-        "x": {
+        "y": {
           "field": "Region",
           "type": "nominal",
-          "sort": "-y"
+          "sort": "-x"
         },
         "color": {
           "value": "gainsboro"
         },
         "size": {
-          "value": 8
+          "value": 6
         },
-        "y": {
+        "x": {
           "aggregate": "mean",
           "field": "Happiness Score",
           "type": "quantitative"
@@ -2087,19 +2083,19 @@
         "opacity": 1
       },
       "encoding": {
-        "x": {
+        "y": {
           "field": "Region",
           "type": "nominal",
-          "sort": "-y"
+          "sort": "-x"
         },
         "size": {
-          "value": 1000
+          "value": 700
         },
         "color": {
           "field": "Region",
           "type": "nominal"
         },
-        "y": {
+        "x": {
           "aggregate": "mean",
           "field": "Happiness Score",
           "type": "quantitative"
