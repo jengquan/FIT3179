@@ -2104,7 +2104,7 @@
     },
     {
       "mark": {
-        "type": "circle",
+        "type": "bar",
         "tooltip": true,
         "opacity": 1
       },
@@ -2115,10 +2115,13 @@
           "sort": {
             "field": "Happiness Score",
             "order": "descending"
-          }
+          },
+          
+       "axis": {"labelAlign": "left", 
+      "labelAngle": 40}
         },
         "size": {
-          "value": 1000
+          "value": 25
         },
         "color": {
           "condition": {
