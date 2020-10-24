@@ -4,7 +4,7 @@
   "fontSize": 17, "fontWeight": 600},
   "description": "A simple bar chart with embedded data.",
   "width": "container",
-  "height": 400,
+  "height": 450,
   "data": {
     "values": [
       {
