@@ -53,6 +53,7 @@ nav {
   font-family: "Times New Roman", Times, serif;
   padding-top: 10px;
   font-size: 24px;
+  border-style: solid; border-color: rgb(255,255,255); border-radius:25px;border-width: 7px;
   
   
 }
@@ -133,6 +134,8 @@ font-family: Arial, Helvetica, sans-serif;
   width: 50%;
   height: 300px; /* Should be removed. Only for demonstration */
   text-align: center;
+  
+    border-style: solid; border-color: rgb(255,255,255); border-radius:25px;border-width: 7px;
 }
 
   
@@ -148,6 +151,8 @@ font-family: Arial, Helvetica, sans-serif;
   height: 500px; /* Should be removed. Only for demonstration */
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  
+   border-style: solid; border-color: rgb(255,255,255); border-radius:10px;border-width: 5px;
 }
   
     
@@ -205,33 +210,33 @@ font-family: Arial, Helvetica, sans-serif;
   
 <section>
   <nav style ="float: right; text-align: center; ">
-    <p> Distribution of <b>Happiness Score</b> among each <b>region</b> ? </p>
+    <p> Top 10 <b>happiest</b> <b>countries</b> in the world ?  </p>
   </nav>
   
-   <nav style ="float: left; text-align: center;  border-right-style: ridge;">
-    <p> Top 10 <b>happiest</b> <b>countries</b> in the world ? </p>
+   <nav style ="float: left; text-align: center; ">
+    <p> Distribution of <b>Happiness Score</b> across each <b>country</b> ? </p>
   </nav>
  </section>
   
 <section>  
 <div class="row">
-  <div id="vis1" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  border-right-style: ridge;"> </div>  
+  <div id="vis1" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>  
   <div id="vis10" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  "> </div>
 </div>
 </section>
   
 <section>
 <div class="row" >
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-right-style: ridge;  margin-bottom: 10px;">
-     <p>Firstly, <i>Canada</i> can be seen as one of the happiest country in the world as the citizens has <b>strong social ties</b> with people they associate with regardless of background that keeps them happy.
-      Not to mention,Canada also has a relatively <b>low unemployment rate</b>, <b>good health and education system</b> which contributes to the high level of life satisfication.
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;">
+     <p><i>Canada</i> can be seen as one of the happiest country in the world as the citizens has <b>strong social ties</b> with people they associate with.
+       Besides, <i>Canada</i> also has a relatively <b>low unemployment rate</b>, a <b>good health </b>and <b>education system</b> which contributes to the country's happiness.
 <br><br>
-      Next, we can also see that <i>Australia</i> has a high Happiness Score. This is mainly due to the <b>good work-life balance</b> that the citizens have, which means that they have more time for their own family and friends 
-      which contributes to happiness. The country also has <b>low level of pollution</b> and high levels of civic engagement job oppurtunities.
+      Besides, a <b>low level of pollution</b>, high numbers of <b>job oppurtunities</b> and citizens having a <b>good work-life balance</b> 
+       easily contributes to the Happiness Score of <i>Australia</i>. 
 <br><br>
-      Furthermore, citizens in <i>New Zealand</i> is well-known for its <b>laid-back lifestyle</b> and the <b>social support</b> obtained was one of the main factors of New Zealander's high ranking for Happiness Score. 
-      Besides that, 
-      their <b>resilience</b> and the ability to <b>handle tough situations</b> also contributes to the country's overall happiness. </p>
+      Citizens in <i>New Zealand</i> is well-known for its <b>laid-back lifestyle</b> and the <b>social support</b> obtained 
+       has contributed to the country's overall happiness.
+      </p>
     
   
   </div>  
@@ -245,7 +250,7 @@ font-family: Arial, Helvetica, sans-serif;
 
   
  <section>
-  <nav style ="float: right; text-align: center; border-left-style: ridge;">
+  <nav style ="float: right; text-align: center; ">
     <p> Distribution of <b>Happiness Score</b> among each <b>region</b> ? </p>
   </nav>
   
@@ -259,7 +264,7 @@ font-family: Arial, Helvetica, sans-serif;
 <section>  
 <div class="row">
   <div id="vis2" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>  
-  <div id="vis3" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  border-left-style: ridge; "> </div>
+  <div id="vis3" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
 </div>
 </section>
   
@@ -268,19 +273,19 @@ font-family: Arial, Helvetica, sans-serif;
   <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left; margin-bottom: 10px;">
     
    <p> As mentioned earlier, we can see why <i>Australia and New Zealand</i> region tops the chart for having the <b>highest average Happiness Score</b>.<br><br>
-    Next, <i>Western Europe</i> has the <b>second highest</b> average Happiness Score, this is because citizens in Nordic countries such as <i>Finland</i>, <i>Denmark</i> and <i>Norway</i> experience a 
+    <i>Western Europe</i> has the <b>second highest</b> average Happiness Score, this is because citizens in Nordic countries such as <i>Finland</i>, <i>Denmark</i> and <i>Norway</i> experience a 
     high sense of <b>autonomy</b> and <b>freedom</b>, 
     and <b>social trust</b> towards each other. Institutional quality and <b>well-functioning democracy</b> also plays a huge role in determining the country's happiness.
     <br><br>
 
-    Besides that, we can see that <i>Sub-Saharan Africa</i> is the <b>unhappiest region</b> in the world. This is due to some issues faced by the citizens in countries like <i>Nigeria</i>, <i>Tanzania</i> and <i>Kenya</i>, 
+    <i>Sub-Saharan Africa</i> is the <b>unhappiest region</b> in the world. This is due to some issues faced by the citizens in countries like <i>Nigeria</i>, <i>Tanzania</i> and <i>Kenya</i>, 
  
-    where <b>energy shortages</b>, fuel scarcity, and the <b>lack of access of clean water</b> happens frequently.
-    Not to mention, high crime rates and <b>government corruption</b> has also affected the overall country's happiness level in the region.</p>
+    where <b>energy shortages</b>, high crime rates and the <b>lack of access of clean water</b> happens frequently.
+    <b>Government corruption</b> has also affected the overall country's happiness level in the region.</p>
     
   
   </div>  
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-left-style: ridge; margin-bottom: 10px; "> 
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px; "> 
     <p>Based on the boxplots above, we can see that <i>North America</i> region has the <b>largest range</b> among other regions, followed by <i>Middle East and Northern Africa</i>. 
     <br><br>This shows that countries in these two region tend to have a wide range of different Happiness Score as compared to other regions like
     <i>Eastern Asia</i> and <i>Southern Asia</i>.<br><br>
@@ -296,7 +301,7 @@ font-family: Arial, Helvetica, sans-serif;
   
   
 <section>
-  <nav style ="float: right; text-align: center; border-left-style: ridge; ">
+  <nav style ="float: right; text-align: center; ">
     <p> Is there a correlation between <b>Happiness Score</b> and <b>Life expectancy</b> ?</p>
   </nav>
   
@@ -308,14 +313,14 @@ font-family: Arial, Helvetica, sans-serif;
 <section>  
 <div class="row">
   <div id="vis4" class="column" style ="object-fit: scale-down; height: 550px; padding-right: 30px;  "> </div>  
-  <div id="vis7" class="column" style ="object-fit: scale-down; height: 550px; padding-right: 30px; border-left-style: ridge;  "> </div>
+  <div id="vis7" class="column" style ="object-fit: scale-down; height: 550px; padding-right: 30px;  "> </div>
 </div>
 </section>
   
 <section>
 <div class="row" >
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;   margin-bottom: 10px; "> desc </div>  
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left; border-left-style: ridge;  margin-bottom: 10px;"> desc </div>
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px; "> desc </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>
 </div>
 </section>  
 
@@ -329,22 +334,22 @@ font-family: Arial, Helvetica, sans-serif;
     <p> What is the <b>Economy (GDP per capita)</b> across all <b>countries</b> ?</p>
   </nav>
   
-   <nav style ="float: right; text-align: center; border-left-style: ridge;">
+   <nav style ="float: right; text-align: center;">
     <p> <b>Average Economy (GDP per capita)</b> for each <b>region</b> ? </p>
   </nav>
  </section>
   
 <section>  
 <div class="row">
-  <div id="vis6" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px;"> </div>  
-  <div id="vis5" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; border-left-style: ridge;"> </div>
+  <div id="vis6" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;"> </div>  
+  <div id="vis5" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
 </div>
 </section>
   
 <section>
 <div class="row" >
   <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>  
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-left-style: ridge;  margin-bottom: 10px;"> desc </div>
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>
 </div>
 </section>  
 
@@ -352,7 +357,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 <section>
-  <nav style ="float: right; text-align: center; border-left-style: ridge; ">
+  <nav style ="float: right; text-align: center;  ">
     <p> Distribution of <b>Life expectancy</b> among each <b>region</b> ? </p>
   </nav>
   
@@ -363,15 +368,15 @@ font-family: Arial, Helvetica, sans-serif;
   
 <section>  
 <div class="row">
-  <div id="vis9" class="column" style ="object-fit: scale-down; height: 400px; padding-right: 30px;"> </div>  
-  <div id="vis8" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; border-left-style: ridge; "> </div>
+  <div id="vis9" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;"> </div>  
+  <div id="vis8" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  "> </div>
 </div>
 </section>
   
 <section>
 <div class="row" >
   <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> desc </div>  
-  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  border-left-style: ridge; margin-bottom: 10px;"> desc </div>
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;   margin-bottom: 10px;"> desc </div>
 </div>
 </section>  
 
