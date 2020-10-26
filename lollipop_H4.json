@@ -4,7 +4,7 @@
   "fontSize": 17, "fontWeight": 600},
   "description": "A simple bar chart with embedded data.",
   "width": "container",
-  "height": 350,
+  "height": 380,
    
   "title": {
   "text": "Country against Happiness Score",
@@ -2118,7 +2118,7 @@
           },
           
        "axis": {"labelAlign": "left", 
-      "labelAngle": 40}
+      "labelAngle": 40, "labelFontSize": 13}
         },
         "size": {
           "value": 25
