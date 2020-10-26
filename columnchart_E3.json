@@ -5,7 +5,7 @@
   
   "description": "A simple bar chart with embedded data.",
   "width": "container",
-  "height": 300,
+  "height": 350,
   "data": {
     "values": [
       {
