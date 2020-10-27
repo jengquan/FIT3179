@@ -2075,7 +2075,7 @@
       "filter": "datum.rank <= 10"
     },
     {
-      "calculate": "{'Finland': '🏴', 'Denmark': '🇩🇰', 'Norway': '🇳🇴','Iceland': '🇮🇸', 'Netherlands': '🇳🇱', 'Switzerland': '🇦🇪', 'Sweden': '🇸🇪', 'New Zealand': '🇳🇿', 'Canada': '🇨🇦','Austria': '🇦🇹'}[datum.Country]",
+      "calculate": "{'Finland': '🇫🇮', 'Denmark': '🇩🇰', 'Norway': '🇳🇴','Iceland': '🇮🇸', 'Netherlands': '🇳🇱', 'Switzerland': '🇦🇪', 'Sweden': '🇸🇪', 'New Zealand': '🇳🇿', 'Canada': '🇨🇦','Austria': '🇦🇹'}[datum.Country]",
       "as": "Flag"
     }
 
