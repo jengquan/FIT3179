@@ -2316,7 +2316,7 @@
     "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "Happiness Score", "type": "quantitative", "format": ","},
-          {"field": "Life Expectancy", "type": "quantitative", "format": ","},
+          {"field": "Life expectancy", "type": "quantitative", "format": ","},
           {"field": "Region", "type": "nominal"},
           {"field": "Population", "type": "quantitative", "format": ","}
         ]
@@ -2336,7 +2336,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": " datum['Country'] == 'Japan' || datum['Country'] == 'Denmark' || datum['Country'] == 'Ivory Coast' || datum['Country'] == 'Switzerland' ||  datum['Country'] == 'Syria' || datum['Country'] == 'India' || datum['Country'] == 'Mexico' || datum['Country'] == 'Nigeria' || datum['Country'] == 'Cambodia' || datum['Country'] == 'Cameroon' || datum['Country'] == 'Pakistan' || datum['Country'] == 'United States' ",
+            "test": " datum['Country'] == 'Japan' || datum['Country'] == 'Denmark' || datum['Country'] == 'Mongolia' || datum['Country'] == 'Switzerland' ||  datum['Country'] == 'Syria' || datum['Country'] == 'South Sudan' || datum['Country'] == 'Mexico' || datum['Country'] == 'Nigeria' || datum['Country'] == 'Cambodia' || datum['Country'] == 'Cameroon' || datum['Country'] == 'Pakistan' || datum['Country'] == 'United States' ",
             "value": 1
           },
           "value": 0
