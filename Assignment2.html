@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Assignment 2</title>
+
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+  
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  
+
+/* Style the header */
+header {
+  background-color: #ffe066;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+  font-family: "Times New Roman", Times, serif
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: right;
+  width: 50%;
+  height: 100px;
+  background: #fff0b3;
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 10px;
+  font-size: 24px;
+  border-style: solid; border-color: rgb(255,255,255); border-radius:25px;border-width: 7px;
+  
+  
+}
+
+
+
+/* Style the footer */
+footer {
+  background-color: #fffae6;
+  height: 30px;
+  color: black;
+  font-size: 15px;
+  padding-top: 2px;
+  border-style: solid; border-color: rgb(255,255,255); border-radius:25px;border-width: 7px;
+  text-align: left;
+}
+
+
+.brief {
+  background: #fff5cc;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  }
+
+.question {
+ background: #fff0b3;
+ text-align: center;
+ width: 100%;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+ font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+}
+
+.map {
+background-color:white;
+height : 300px;
+text-align: center;
+width: 100%;
+}
+
+.mapdesc {
+ background: #fff5cc;
+ width: 100%;
+ margin-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+  
+.vis-container{
+ width: 100%;
+ text-align: center;
+ object-fit: contain;
+ height: auto;
+}
+ 
+
+
+ .pure-g{
+   margin-bottom: 10px;
+   }
+  
+
+.column {
+  float: left;
+  width: 50%;
+  height: 300px; /* Should be removed. Only for demonstration */
+  text-align: center;
+  
+    border-style: solid; border-color: rgb(255,255,255); border-radius:25px;border-width: 7px;
+}
+
+  
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+  
+    
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>World Happiness Score 2019</h2>
+</header>
+
+  
+<section>
+  <article class ="brief">
+   
+    <p>
+      <b>Happiness</b> is a healthy emotion which plays an <b>important role</b> in our life, that helps us to stay fit both mentally and physically. 
+      Happiness not only keeps us away from any health issues but also reduces our stress level. <br><br>
+
+      Happiness is <b>different</b> for each person as everyone has their <b>own way</b> to be happy. Hence, it is important to understand and find out <b>our own</b> definition of happiness 
+      or what <b>makes us happy</b> as the reason of happiness may be different for everyone. <br> <br>
+      
+      Therefore, the objective of this visualisation is to share insights on topics such as the <b>Happiness Score</b> across each country, the <b>happiest region</b> in the world, the <b>distribution</b> of Happiness Score for each regions in the world.
+    
+
+      Next, we will be identifying wheter <b>Economy (GDP per capita)</b> is a <b>factor</b> of happiness and wheter a happier country leads to a longer <b>Life Expectancy</b>. Both <b>spatial distribution</b> of each country's Economy (GDP per capita) and Life Expectancy will be identified in this visualisation.
+      
+      Lastly, we will also be covering the top 10 <b>unhappiest</b> and <b>happiest country</b> in the world to live in.
+    </p>
+    
+  </article>
+</section>
+
+<!-- 
+<section>
+  <article class ="question">
+    <p>Question 1</p>
+  </article>
+  
+ 
+   <div class="pure-g">
+        <div class="pure-u-1">
+          <div id="vis1"  class="vis-container" ></div>
+        </div>
+   </div>
+  
+  
+</section>
+
+-->
+  
+
+  
+  
+<section>
+  <nav style ="float: right; text-align: center; ">
+    <p> Top 10 <b>happiest</b> <b>countries</b> in the world ?  </p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center; ">
+    <p> Distribution of <b>Happiness Score</b> across each <b>country</b> ? </p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis1" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>  
+  <div id="vis10" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;">
+     <p><i>Canada</i> can be seen as one of the happiest country in the world as the citizens has <b>strong social ties</b> with people they associate with.
+       Besides, <i>Canada</i> also has a relatively <b>low unemployment rate</b>, a <b>good health </b>and <b>education system</b> which contributes to the country's happiness.
+<br><br>
+      Besides, a <b>low level of pollution</b>, high numbers of <b>job oppurtunities</b> and citizens having a <b>good work-life balance</b> 
+       easily contributes to the Happiness Score of <i>Australia</i>. 
+<br><br>
+      Citizens in <i>New Zealand</i> is well-known for its <b>laid-back lifestyle</b> and the <b>social support</b> obtained 
+       has contributed to the country's overall happiness.
+      </p>
+    
+  
+  </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> 
+  <p>
+    <i>Finland</i> is the <b>happiest</b> place on earth as it has an extensive <b>welfare benefits</b>, <b>low</b> levels of <b>corruption</b>, a <b>well-functioning</b> democracy, and an instilled <b>sense of freedom</b> and <b>independence</b>. 
+    <br><br>
+    <i>Denmark</i> has one of the most <b>generous retirement systems</b> in the world, <b>short working hours</b> (37 hours PW) and <i>stress leave</i> exists which makes them the <b>second happiest</b> country in the world. 
+    <br><br>
+    <i>Norway</i> is one of the <b>safest</b> country in the world and it offers <b>tuition-free</b> quality education. Norwegians have a <b>strong network of family</b> and a strong <b>sense of identity</b> which contributes to the country's happiness.
+  </p>
+
+  </div>
+</div>
+</section>  
+
+
+  
+ <section>
+  <nav style ="float: right; text-align: center; ">
+    <p> Distribution of <b>Happiness Score</b> among each <b>region</b> ? </p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center;">
+    <p> <b>Average Happiness Score</b> for each <b>region</b> ? </p>
+  </nav>
+ </section>
+  
+  
+
+<section>  
+<div class="row">
+  <div id="vis2" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>  
+  <div id="vis3" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left; margin-bottom: 10px;">
+    
+   <p> As mentioned earlier, we can see why <i>Australia and New Zealand</i> region tops the chart for having the <b>highest average Happiness Score</b>.<br><br>
+    <i>Western Europe</i> has the <b>second highest</b> average Happiness Score, because citizens in Nordic countries such as <i>Finland</i>, <i>Denmark</i> and <i>Norway</i> experience a 
+    high sense of <b>autonomy</b> and <b>social trust</b> towards each other. 
+    <br><br>
+
+    <i>Sub-Saharan Africa</i> is the <b>unhappiest region</b> in the world as there are some issues faced by the citizens in countries like <i>Nigeria</i>, <i>Tanzania</i> and <i>Kenya</i>, 
+ 
+    where <b>energy shortages</b>, the <b>lack of access of clean water</b> and <b>government corruption</b> has affected the overall country's happiness.</p>
+  
+  </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px; "> 
+    <p>Based on the boxplots above, we can see that <i>North America</i> region has the <b>largest range</b> among other regions, followed by <i>Middle East and Northern Africa</i>. 
+    <br><br>This shows that countries in these two region tend to have a wide range of different Happiness Score as compared to other regions like
+    <i>Eastern Asia</i> and <i>Southern Asia</i>.<br><br>
+
+    Next, we can also see that <i>Australia and New Zealand</i> region has the <b>largest median</b> of Happiness Score, followed by <i>Western Europe</i>.
+      The <b>least</b> median for Happiness Score will be in <i>Sub-Sahran Africa</i>. </p>
+
+  </div>
+</div>
+</section>  
+  
+  
+  
+  
+<section>
+  <nav style ="float: right; text-align: center; ">
+    <p> Is there a correlation between <b>Happiness Score</b> and <b>Life expectancy</b> ?</p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center;  font-size: 23px; ">
+    <p> Do <b>countries</b> with better <b>Economy (GDP per capita)</b> tend to be <b>happier</b> ?</p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis4" class="column" style ="object-fit: scale-down; height: 550px; padding-right: 30px;  "> </div>  
+  <div id="vis7" class="column" style ="object-fit: scale-down; height: 550px; padding-right: 30px;  "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px; ">
+  <p>
+The bubble plot above shows us the <b>correlation</b> between <b>Economy (GDP per capita)</b> and <b>Happiness score</b>, where each <b>circle</b> represents a <b>country</b> and the <b>colour</b> of the circle represents the <b>region</b>. The <b>size</b> of the circle represents the <b>population</b> of the country. 
+<br><br>
+We can see that <i>Finland</i> which has a <b>high</b> Economy (GDP per capita) of <b>1.34</b> also has a <b>high</b> Happiness Score of <b>7.8</b>, while <i>South Sudan</i> has a <b>low</b> Economy (GDP per capita) of <b>0.3</b>, has a Happiness Score of <b>2.9</b>.
+<br><br>
+Hence, countries with <b>better Economy (GDP per capita)</b> tend to have a <b>higher Happiness Score</b>.  <p>
+    
+  
+  </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> 
+  
+  <p>
+The bubble plot above shows us the <b>correlation</b> between <b>Happiness score</b> and <b>Life Expectancy</b>, where each <b>circle</b> represents a <b>country</b> and the <b>colour</b> of the circle represents the <b>region</b>. The <b>size</b> of the circle represents the <b>population</b> of the country. 
+<br><br>
+We can see that <i>Switzerland</i> which has a <b>high</b> Happiness Score of <b>7.48</b> also has a <b>high</b> Life Expectancy of <b>83.8</b> years, while <i>South Sudan</i> has a <b>low</b> Happiness Score of <b>2.85</b>, has a Life Expectancy of <b>57.8</b> years.
+<br><br>
+Therefore, countries with <b>higher Happiness Score</b> tend to have a <b>higher Life Expectancy</b>.  <p>
+    
+  
+  </div>
+</div>
+</section>  
+
+  
+  
+  
+  
+
+<section>
+  <nav style ="float: left; text-align: center;">
+    <p> What is the <b>Economy (GDP per capita)</b> across all <b>countries</b> ?</p>
+  </nav>
+  
+   <nav style ="float: right; text-align: center;">
+    <p> <b>Average Economy (GDP per capita)</b> for each <b>region</b> ? </p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis6" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;"> </div>  
+  <div id="vis5" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> 
+  
+  <p><i>USA</i> is the <b>second largest manufacturer</b> in the world and the nation's economy is fueled by abundant <b>natural resources</b>, a sophisticated <b>physical infrastructure</b> 
+    and a large workforce. <br><br><i>Saudi Arabia</i> possesses about <b>16%</b> of the world's <b>petroleum reserves</b> and ranks as the <b>largest exporter</b> of petroleum. 
+    The petroleum sector accounts for roughly <b>87%</b> of budget revenues, <b>42%</b> of GDP, and <b>90%</b> of export earnings.<br><br> <i>Norway</i> is a leading producer and the <b>second largest seafood exporter</b>. 
+    <b>Oil</b> and <b>gas</b> exports comibined with skilled <b>labor force</b> plays a huge role in the country's economy too. </p>  
+  </div>  
+  
+  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;">
+  
+<p>
+<i>Australia</i> is an export nation gaining <b>most GDP growth</b> from <b>overseas trade</b>, <b>iron ore</b> is the country’s <b>largest</b> source of <b>export</b> revenue followed by <b>mineral fuels</b> and <b>gems</b>, 
+  while <i>New Zealand</i> economy is fueled by exporting <b>agricultural commodities</b> and <b>tourism</b>. <br><br>
+
+<i>Western Europe</i> is the <b>first</b> world region to develop a <b>modern economy</b> based on <b>commercial agriculture</b>, provision of <b>specialized services</b> and <b>industrial development</b>. <br><br> 
+
+<b>Rapid modernization</b> with the usage of <b>high technology</b> has improved the economic growth of <i>Eastern Asia</i>. For example, <i>South Korea</i> and <i>Taiwan</i> are among the <b>largest</b> manufacturers of <b>consumer technology</b> globally. </p>
+
+  </div>
+</div>
+</section>  
+
+  
+
+
+<section>
+  <nav style ="float: right; text-align: center;  ">
+    <p> Distribution of <b>Life expectancy</b> among each <b>region</b> ? </p>
+  </nav>
+  
+   <nav style ="float: left; text-align: center; ">
+    <p> What is the <b>Life Expectancy</b> across all <b>countries</b> ? </p>
+  </nav>
+ </section>
+  
+<section>  
+<div class="row">
+  <div id="vis9" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;"> </div>  
+  <div id="vis8" class="column" style ="object-fit: scale-down; height: auto; padding-right: 30px;  "> </div>
+</div>
+</section>
+  
+<section>
+<div class="row" >
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;  margin-bottom: 10px;"> 
+  <p><i>Monaco</i> has the <b>longest</b> life expectancy in the world due to the nation's <b>state-funded</b> healthcare system and their Mediterranean diet which includes <b>seafood</b> which are rich in nutrients.
+    <br><br><i>Japan</i> has a high life expectancy is largely down to the nation's <b>healthy diet</b> which consists of combination of high quality foods <b>low in saturated fats</b> and with <b>few processed foods</b>. 
+    <br><br>The <b>accessibility</b> of <b>health care systems</b> and <b>nutrional education</b> in all schools plays a huge role in <i>South Korea's</i> life expectancy. <i>Kimchi</i> which is a popular food in Korean diet <b>rich in probiotics</b> 
+    and <b>vitamin A</b> also plays a crucial role in human health.</p>
+    
+  
+  </div>  
+  <div class="column" style="background-color:#fff5cc; height: 230px; padding: 10px;  text-align: left;   margin-bottom: 10px;">
+  
+    <p>
+Firstly, we can see that the life expectancy of <b>most</b> countries in the <i>Central and Eastern Europe</i> region such as <i>Ukraine</i>, <i>Russia</i> and <i>Libya</i> falls between the range of <b>70 to 75 years</b>.<br><br>
+Next, <b>most</b> countries in <i>Southeastern Asia</i> region such as <i>Malaysia</i>, <i>Vietnam</i> and <i>Thailand</i> has a life expectancy of <b>75 to 80 years</b>.<br><br>
+Besides that, a <b>majority</b> of countries in the <i>Western Europe</i> region such as <i>Spain</i>, <i>France</i> and <i>Iceland</i> has a life expectancy from <b>80 up to 85 years</b>. </p>
+   
+  </div>
+</div>
+</section>  
+
+  
+ 
+  
+  
+  
+<footer>
+  <p>Visualisation by Ong Jeng Quan FIT3179 2020</p>
+</footer>
+  
+  
+
+
+  <script type="text/javascript">
+  var specVis1= "./choropleth_H1.json";
+  var specVis2= "./lollipop_H2.json";
+  var specVis3= "./boxplot_H3.json";
+   
+  var specVis4= "./scatterplot_E1.json";
+  var specVis5= "./columnchart_E3.json";
+  var specVis6= "./choropleth_E2.json";
+    
+ 
+  var specVis7= "./scatterplot_L1.json";
+  var specVis8= "./stripplot_L3.json";
+  var specVis9= "./choropleth_L2.json";
+    
+    
+  var specVis10= "./lollipop_H4.json";
+  var specVis11= "./lollipop_H5.json";
+
+   
+   
+  vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis5', specVis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis6', specVis6, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis7', specVis7, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis8', specVis8, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis9', specVis9, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  vegaEmbed('#vis10', specVis10, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+  vegaEmbed('#vis11', specVis11, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    
+    
+    
+</script>
+  
+  
+  
+</body>
+</html>
