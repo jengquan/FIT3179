@@ -2071,6 +2071,16 @@
     "opacity": {
       "condition": {"selection": "region_highlight", "value": 1},
           "value": 0.2
-        }
+        },
+    
+        
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          
+          {"field": "Region", "type": "nominal"},
+         
+          {"field": "Life expectancy", "type": "quantitative", "format": ","}
+        ]
+    
   }
 }
